@@ -1,6 +1,6 @@
 package com.example.josefernandes.capturalog.activity;
 
-public interface LoginActivityConstantes {
+public interface Constantes {
     String APP_OPENED = "Opened";
     String APP_CLOSED = "Closed";
     String NOVA_LINHA = "\n";
