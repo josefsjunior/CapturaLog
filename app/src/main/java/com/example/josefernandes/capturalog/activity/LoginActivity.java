@@ -15,9 +15,9 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Fullscreen;
 import org.androidannotations.annotations.ViewById;
 
-import static com.example.josefernandes.capturalog.activity.LoginActivityConstantes.APP_CLOSED;
-import static com.example.josefernandes.capturalog.activity.LoginActivityConstantes.APP_OPENED;
-import static com.example.josefernandes.capturalog.activity.LoginActivityConstantes.EMAIL;
+import static com.example.josefernandes.capturalog.activity.Constantes.APP_CLOSED;
+import static com.example.josefernandes.capturalog.activity.Constantes.APP_OPENED;
+import static com.example.josefernandes.capturalog.activity.Constantes.EMAIL;
 
 @Fullscreen
 @EActivity(R.layout.activity_login)

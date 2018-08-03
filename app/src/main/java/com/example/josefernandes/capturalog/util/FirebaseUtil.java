@@ -12,8 +12,8 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 
-import static com.example.josefernandes.capturalog.activity.LoginActivityConstantes.ARQUIVO;
-import static com.example.josefernandes.capturalog.activity.LoginActivityConstantes.ARQUIVO_FIREBASE;
+import static com.example.josefernandes.capturalog.activity.Constantes.ARQUIVO;
+import static com.example.josefernandes.capturalog.activity.Constantes.ARQUIVO_FIREBASE;
 
 public class FirebaseUtil {
 

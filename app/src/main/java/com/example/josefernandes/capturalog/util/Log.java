@@ -7,8 +7,8 @@ import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.example.josefernandes.capturalog.activity.LoginActivityConstantes.ARQUIVO;
-import static com.example.josefernandes.capturalog.activity.LoginActivityConstantes.NOVA_LINHA;
+import static com.example.josefernandes.capturalog.activity.Constantes.ARQUIVO;
+import static com.example.josefernandes.capturalog.activity.Constantes.NOVA_LINHA;
 
 public class Log {
 
