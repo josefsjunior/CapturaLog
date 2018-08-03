@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.josefernandes.capturalog.R;
+import com.example.josefernandes.capturalog.util.Log;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -64,14 +65,14 @@ public class LoginActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        montaLog(APP_OPENED);
+        Log.montaLog(APP_OPENED, getApplicationContext());
         enviaArquivoFirebase();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        montaLog(APP_CLOSED);
+        Log.montaLog(APP_CLOSED, getApplicationContext());
         enviaArquivoFirebase();
     }
 
@@ -80,24 +81,6 @@ public class LoginActivity extends Activity {
         vaiParaMenu.putExtra(EMAIL, login_email.getText().toString());
         startActivity(vaiParaMenu);
         finish();
-    }
-
-    private void montaLog(String evento) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
-        Date dataFormatada = simpleDateFormat.getCalendar().getTime();
-        String textoGravacao = "App " + evento + " - " + dataFormatada;
-        gravar(textoGravacao);
-    }
-
-    public void gravar(String data) {
-        try {
-            FileOutputStream fOut = getApplicationContext().openFileOutput(ARQUIVO, Context.MODE_APPEND);
-            OutputStreamWriter osw = new OutputStreamWriter(fOut);
-            osw.write(NOVA_LINHA + data);
-            osw.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     private void enviaArquivoFirebase() {
