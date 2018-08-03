@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "466332351988",
+    "firebase_url": "https://captura-a6ec6.firebaseio.com",
+    "project_id": "captura-a6ec6",
+    "storage_bucket": "captura-a6ec6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466332351988:android:6c6df0f7a1f5463e",
+        "android_client_info": {
+          "package_name": "com.example.josefernandes.capturalog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466332351988-p6q17r5lp5c3ett9cn7dcaeqnmn39aht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.josefernandes.capturalog",
+            "certificate_hash": "0cc66a7d48fdb16fceca4535323b29d4c6463a2c"
+          }
+        },
+        {
+          "client_id": "466332351988-g4junhnub8phfle3j3p8e1u036dvfsbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHP51FXz2Zoasne_yCBHKzxnLApO6KySo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466332351988-g4junhnub8phfle3j3p8e1u036dvfsbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
