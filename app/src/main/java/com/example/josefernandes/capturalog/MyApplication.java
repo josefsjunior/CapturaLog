@@ -3,9 +3,13 @@ package com.example.josefernandes.capturalog;
 
 import android.app.Application;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 
 import com.example.josefernandes.capturalog.util.FirebaseUtil;
 import com.example.josefernandes.capturalog.util.Log;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 public class MyApplication extends Application {
     public void onCreate() {
@@ -20,16 +24,25 @@ public class MyApplication extends Application {
     }
 
     public void handleUncaughtException(Thread thread, Throwable e) {
-        e.printStackTrace(); // not all Android versions will print the stack trace automatically
+        //e.printStackTrace(); // not all Android versions will print the stack trace automatically
 
         Intent intent = new Intent();
         intent.setAction("android.intent.action.SEND"); // see step 5.
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // required when starting from Application
         startActivity(intent);
 
-        Log.montaLog(e.getMessage(), getApplicationContext());
+        StringWriter errors = montaLogDeErro(e);
+
+        Log.montaLog(errors.toString(), getApplicationContext());
         FirebaseUtil.enviaArquivoFirebase(getApplicationContext());
 
         System.exit(1); // kill off the crashed app
+    }
+
+    @NonNull
+    private StringWriter montaLogDeErro(Throwable e) {
+        StringWriter errors = new StringWriter();
+        e.printStackTrace(new PrintWriter(errors));
+        return errors;
     }
 }
