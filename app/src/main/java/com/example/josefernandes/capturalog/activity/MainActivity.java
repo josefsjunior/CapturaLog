@@ -43,4 +43,11 @@ public class MainActivity extends Activity {
         Log.montaLogUsuario(APP_CLOSED, email, getApplicationContext());
         FirebaseUtil.enviaArquivoFirebaseUsuario(getApplicationContext(), email);
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.montaLogUsuario(APP_CLOSED, email, getApplicationContext());
+        FirebaseUtil.enviaArquivoFirebaseUsuario(getApplicationContext(), email);
+    }
 }
