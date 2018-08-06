@@ -58,6 +58,13 @@ public class LoginActivity extends Activity {
         FirebaseUtil.enviaArquivoFirebase(getApplicationContext());
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.montaLog(APP_CLOSED, getApplicationContext());
+        FirebaseUtil.enviaArquivoFirebase(getApplicationContext());
+    }
+
     private void vaiParaMenu() {
         Intent vaiParaMenu = new Intent(this, MainActivity_.class);
         vaiParaMenu.putExtra(EMAIL, login_email.getText().toString());
