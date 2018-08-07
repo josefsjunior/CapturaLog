@@ -35,7 +35,7 @@ public class LoginActivity extends Activity {
     @Click
     void login_botao() {
         String email = login_email.getText().toString();
-        email = null;
+        //email = null;
         String senha = login_senha.getText().toString();
 
         if(email.isEmpty() || senha.isEmpty()){
